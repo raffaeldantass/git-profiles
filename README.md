@@ -1,2 +1,1 @@
-# git-profiles
-A project to show Github Users using React and Redux 
+![GitHub Profile Logo](./docs/git-profile-logo.svg "GitHub Profile Logo")
