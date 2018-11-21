@@ -1,0 +1,50 @@
+{
+  "name": "git-profiles",
+  "version": "0.1.0",
+  "description": "<p align=\"center\">   <img src=\"./docs/git-profile-logo.svg\" alt=\"GitHub Profile Logo\" width=\"100\" />   <h1 align=\"center\"> Git-Profile </h1>   <h3 align=\"center\"> A beutiful way to check user's profile in GitHub </h3> </p>",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:webpack": "set NODE_ENV=development node && node_modules/.bin/webpack-dev-server --config ./config/dev.config.js",
+    "start:stylus": "node_modules/.bin/stylus ./src/_assets/styles/main.styl -o ./dist/_assets/styles/main.css -c -w",
+    "start": "node_modules/.bin/concurrently \"yarn start:webpack\" \"yarn start:stylus\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raffaeldantass/git-profiles.git"
+  },
+  "author": "Rafael Dantas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raffaeldantass/git-profiles/issues"
+  },
+  "homepage": "https://github.com/raffaeldantass/git-profiles#readme",
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "concurrently": "^4.1.0",
+    "stylint": "^1.5.9",
+    "stylus": "^0.54.5",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.26.0",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-hot-middleware": "^2.24.3",
+    "webpack-merge": "^4.1.4"
+  }
+}
