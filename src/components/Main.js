@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Main = ({className}) => {
+const Main = ({className, repoName, language, stars, forks}) => {
   return (
     <main className={ className }>
-      <h2> Nome Repositório </h2>
-      <p> Tipo Linguagem </p>
-      <span> Stars: </span>
-      <span> Forks: </span>
+      <h2> { repoName } </h2>
+      <p> { language } </p>
+      <span> Stars: { stars } </span>
+      <span> Forks: { forks } </span>
     </main>
   )
 }
