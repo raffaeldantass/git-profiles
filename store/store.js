@@ -4,9 +4,17 @@ const reducer = (state, action) => {
   
   switch(action.type) {
     case 'FETCH_USER': 
-    console.log(action.payload);
-      state = {...state, user: action.payload};
-      console.log(state);
+      state = {
+        ...state,
+        photo: action.payload.avatar_url, 
+        name: action.payload.name,
+        user: action.payload.login,
+        email: action.payload.email,
+        numberOfRepos: action.payload.public_repos,
+        following: action.payload.following,
+        followers: action.payload.followers,
+        site: action.payload.blog
+      };
       break;
   }
 
