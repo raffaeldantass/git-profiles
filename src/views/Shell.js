@@ -11,10 +11,11 @@ const Shell = ({ data }) => {
 
       <Main 
         className = "main"
-        repoName = { data.repos.repoName }
-        language = { data.repos.language }
-        stars = { data.repos.stars }
-        forks = { data.repos.forks }
+        data = { data.repos }
+        // repoName = { data.repos[0].repoName }
+        // language = { data.repos.language }
+        // stars = { data.repos.stars }
+        // forks = { data.repos.forks }
       />
 
       <Aside 

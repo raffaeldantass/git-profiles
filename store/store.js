@@ -16,6 +16,23 @@ const reducer = (state, action) => {
         site: action.payload.blog
       };
       break;
+
+    case 'FETCH_REPOS':
+      var checkRepos = action.payload;
+      const newArray = checkRepos.map(repo => {
+        return {
+          name: repo.name,
+          language: repo.language,
+          stars: repo.stargazers_count,
+          forks: repo.forks_count,
+        }
+      })
+
+      state = {
+        ...state,
+        repos: newArray,
+      }
+      break;
   }
 
   return state;
@@ -31,12 +48,14 @@ const initialState = {
   followers: 23,
   site: "www.rafael.com",
 
-  repos: {
-    repoName: "repo 1",
-    language: "js",
-    stars: 10,
-    forks: 15
-  },
+  repos: [
+    {
+      name: "repo 1",
+      language: "js",
+      stargazers_count: 10,
+      forks_count: 15
+    }
+  ],
 }
 const store = createStore(reducer, initialState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 

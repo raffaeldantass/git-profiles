@@ -1,11 +1,12 @@
 import React from 'react';
-import store from '../../store/store';
 import { fetchSearch } from '../../store/actions/FetchSearch';
+import { searchRepos } from '../../store/actions/FetchRepos';
 
 const Navbar = ({className}) => {
   const _search = () => {
     const searchInput = document.getElementById('search_input');
     fetchSearch(searchInput.value);
+    searchRepos(searchInput.value);
   }
 
   return (
