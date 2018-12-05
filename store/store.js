@@ -1,6 +1,6 @@
 import { createStore, combineReducers } from 'redux';
-import fetchUserReducer from './reducers/fetch_user';
-import fetchReposReducer from './reducers/fetch_repos';
+import fetchUserReducer from './reducers/FetchUser';
+import fetchReposReducer from './reducers/FetchRepos';
 
 const rootReducer = combineReducers({ fetchUserReducer, fetchReposReducer });
 
