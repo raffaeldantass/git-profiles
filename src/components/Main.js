@@ -1,13 +1,19 @@
 import React from 'react';
 
 const Main = ({className, data}) => {
+  var keyCount = 0;
+  //Creates a unique Id for each Key prop.
+  function iterator() {
+    return keyCount++;
+  }
+
   let repoBlock = data.map((repo) => {
     return (
-      <section key = {repo.id }>
-        <h2 key = {repo.id }> Repositório: { repo.name } </h2>
-        <p key = {repo.id }> Linguagem: { repo.language } </p>
-        <span key = {repo.id }> Stars: {repo.stargazers_count}  </span>
-        <span key = {repo.id }> Forks: {repo.forks_count}  </span>
+      <section key = { iterator() }>
+        <h2 key = { iterator() }> Repositório: { repo.name } </h2>
+        <p key = { iterator() }> Linguagem: { repo.language } </p>
+        <span key = { iterator() }> Stars: {repo.stargazers_count}  </span>
+        <span key = { iterator() }> Forks: {repo.forks_count}  </span>
       </section>
     )
   })
