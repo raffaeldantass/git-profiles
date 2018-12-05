@@ -5,29 +5,26 @@ import Aside from '../components/Aside';
 import Footer from '../components/Footer';
 
 const Shell = ({ data }) => {
+  const { fetchReposReducer, fetchUserReducer } = data;
   return (
     <div className="container">
       <Navbar className = "nav" />
 
       <Main 
         className = "main"
-        data = { data.repos }
-        // repoName = { data.repos[0].repoName }
-        // language = { data.repos.language }
-        // stars = { data.repos.stars }
-        // forks = { data.repos.forks }
+        data = {fetchReposReducer.repos }
       />
 
       <Aside 
         className = "aside" 
-        photo = { data.photo }
-        name = { data.name }
-        user = { data.user } 
-        email = { data.email }
-        numberOfRepos = { data.numberOfRepos }
-        following = { data.following } 
-        followers = { data.followers }
-        site = { data.site }
+        photo = { fetchUserReducer.photo }
+        name = { fetchUserReducer.name }
+        user = { fetchUserReducer.user } 
+        email = { fetchUserReducer.email }
+        numberOfRepos = { fetchUserReducer.numberOfRepos }
+        following = { fetchUserReducer.following } 
+        followers = { fetchUserReducer.followers }
+        site = { fetchUserReducer.site }
       />
 
       <Footer className = "footer"/>
