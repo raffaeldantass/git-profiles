@@ -1,6 +1,6 @@
 export function handleError(resp) {
   if(!resp.ok) {
-    throw Err(resp.statusText);
+    throw Error(resp);
   }
   return resp;
 } 

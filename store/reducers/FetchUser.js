@@ -13,18 +13,22 @@ const fetchUserReducer = (state = initialState, action) => {
 
   switch(action.type) {
     case 'FETCH_USER':
-    state = {
-      ...state,
-      photo: action.payload.avatar_url, 
-      name: action.payload.name,
-      user: action.payload.login,
-      email: action.payload.email,
-      numberOfRepos: action.payload.public_repos,
-      following: action.payload.following,
-      followers: action.payload.followers,
-      site: action.payload.blog
-    };
-    break;
+      state = {
+        ...state,
+        photo: action.payload.avatar_url, 
+        name: action.payload.name,
+        user: action.payload.login,
+        email: action.payload.email,
+        numberOfRepos: action.payload.public_repos,
+        following: action.payload.following,
+        followers: action.payload.followers,
+        site: action.payload.blog
+      };
+      break;
+
+    case 'CLEAR_SEARCH': 
+      return state = initialState;
+      break;
   }
 
   return state;

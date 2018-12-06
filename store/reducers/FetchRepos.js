@@ -28,6 +28,10 @@ const fetchReposReducer = (state = initialState, action) => {
         repos: newArray,
       }
       break;
+
+    case 'CLEAR_SEARCH': 
+      return state = initialState;
+      break;
   }
 
   return state;

@@ -7,7 +7,7 @@ import Loading from '../components/Loading';
 
 const Shell = ({ data }) => {
   const { fetchReposReducer, fetchUserReducer } = data;
-  console.log(fetchReposReducer.repos.length)
+  
   return (
     <div className="container">
       <Navbar className = "nav" />
