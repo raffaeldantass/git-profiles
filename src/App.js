@@ -5,7 +5,7 @@ import store from '../store/store';
 
 const root = document.getElementById('root');
 const render = () => {
-  ReactDOM.render( <Shell data = {store.getState() } />, root )
+  ReactDOM.render( <Shell data = { store.getState() } />, root )
 }
 
 render();
