@@ -10,7 +10,7 @@ const Navbar = ({className}) => {
   }
 
   return (
-    <nav className={ className }>
+    <nav id="navbar" className={ className }>
       <input id="search_input" type="text" className="nav__input" placeholder="insira um usuario e clique em pesquisar"/>
       <button onClick = { _search } className="nav__button" > Pesquisar </button>
     </nav>
