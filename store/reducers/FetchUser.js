@@ -24,11 +24,11 @@ const fetchUserReducer = (state = initialState, action) => {
         followers: action.payload.followers,
         site: action.payload.blog
       };
-      break;
+    break;
 
-    case 'CLEAR_SEARCH': 
-      return state = initialState;
-      break;
+    case 'CLEAR_FETCH': 
+      return state = Object.assign(state, initialState);
+    break;
   }
 
   return state;

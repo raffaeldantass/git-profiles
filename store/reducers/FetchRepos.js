@@ -9,7 +9,7 @@ const initialState = {
   ],
 };
 
-const fetchReposReducer = (state = initialState, action) => {
+const fetchRepositoriesReducer = (state = initialState, action) => {
 
   switch(action.type) {
     case 'FETCH_REPOS': 
@@ -27,14 +27,14 @@ const fetchReposReducer = (state = initialState, action) => {
         ...state,
         repos: newArray,
       }
-      break;
+    break;
 
-    case 'CLEAR_SEARCH': 
-      return state = initialState;
-      break;
+    case 'CLEAR_FETCH': 
+      return state = Object.assign(state, initialState);
+    break;
   }
 
   return state;
 }
 
-export default fetchReposReducer;
+export default fetchRepositoriesReducer;

@@ -3,23 +3,23 @@ import Navbar from '../components/Navbar';
 import Main from '../components/Main';
 import Aside from '../components/Aside';
 import Footer from '../components/Footer';
-import Loading from '../components/Loading';
+import SplashComponent from '../components/SplashComponent';
 
 const Shell = ({ data }) => {
-  const { fetchReposReducer, fetchUserReducer } = data;
+  const { fetchRepositoriesReducer, fetchUserReducer } = data;
   
   return (
     <div className="container">
       <Navbar className = "nav" />
 
-      
-      { fetchReposReducer.repos.length <= 1 ? 
-      <Loading /> : 
-      <Main 
-        className = "main"
-        data = {fetchReposReducer.repos }
-      /> }
-      
+      { 
+        fetchRepositoriesReducer.repos.length <= 1 ? 
+        <SplashComponent /> : 
+        <Main 
+          className = "main"
+          data = {fetchRepositoriesReducer.repos }
+        /> 
+      }
 
       <Aside 
         className = "aside" 

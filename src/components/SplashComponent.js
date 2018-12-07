@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Loading = () => {
+const SplashComponent = () => {
   return(
-    <section className="loading">
+    <section className="splash-section">
       <img src="./_assets/_img/git-profile-logo.svg" width="180"/>
       <h1> Git-Profile </h1>
       <p> Um jeito diferente de ver os seus projetos :) </p>
@@ -10,4 +10,4 @@ const Loading = () => {
   );
 }
 
-export default Loading;
+export default SplashComponent;

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Main = ({className, data}) => {
   var keyCount = 0;
-  //Creates a unique Id for each Key prop.
+  //Creates an unique Id for each Key prop.
   function iterator() {
     return keyCount++;
   }
