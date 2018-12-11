@@ -4,10 +4,14 @@ import Main from '../components/Main';
 import Aside from '../components/Aside';
 import Footer from '../components/Footer';
 import SplashComponent from '../components/SplashComponent';
+import TabNameHandler from '../helpers/tabNameHandler';
 
 const Shell = ({ data }) => {
   const { fetchRepositoriesReducer, fetchUserReducer } = data;
   
+  //Changes the tab text in browser 
+  TabNameHandler(fetchUserReducer);
+
   return (
     <div className="container">
       <Navbar className = "nav" />
