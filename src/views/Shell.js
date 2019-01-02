@@ -17,24 +17,24 @@ const Shell = ({ data }) => {
       <Navbar className = "nav" />
 
       { 
-        fetchRepositoriesReducer.repos.length <= 1 ? 
+        fetchRepositoriesReducer.get('repos').size <= 1 ? 
         <SplashComponent /> : 
         <Main 
           className = "main"
-          data = {fetchRepositoriesReducer.repos }
+          data = {fetchRepositoriesReducer.get('repos') }
         /> 
       }
 
       <Aside 
         className = "aside" 
-        photo = { fetchUserReducer.photo }
-        name = { fetchUserReducer.name }
-        user = { fetchUserReducer.user } 
-        email = { fetchUserReducer.email }
-        numberOfRepos = { fetchUserReducer.numberOfRepos }
-        following = { fetchUserReducer.following } 
-        followers = { fetchUserReducer.followers }
-        site = { fetchUserReducer.site }
+        photo = { fetchUserReducer.get('photo') }
+        name = { fetchUserReducer.get('name') }
+        user = { fetchUserReducer.get('user') } 
+        email = { fetchUserReducer.get('email') }
+        numberOfRepos = { fetchUserReducer.get('numberOfRepos') }
+        following = { fetchUserReducer.get('following') } 
+        followers = { fetchUserReducer.get('followers') }
+        site = { fetchUserReducer.get('site') }
       />
 
       <Footer className = "footer"/>

@@ -1,7 +1,7 @@
 const TabNameHandler = (reducer) => {
-  reducer.name == 'nome' ? 
+  reducer.get('name') == 'nome' ? 
   document.title = 'Git Profile' :  
-  document.title = reducer.name;
+  document.title = reducer.get('name');
 } 
 
 export default TabNameHandler;

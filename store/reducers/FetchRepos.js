@@ -1,18 +1,21 @@
-const initialState = {
+import { List, fromJS } from 'immutable'
+
+const initialState = fromJS({
   repos: [
     {
-      name: " ",
+      name: "ola",
       language: " ",
       stargazers_count: 0,
       forks_count: 0,
     }
   ],
-};
+});
 
 const fetchRepositoriesReducer = (state = initialState, action) => {
 
   switch(action.type) {
     case 'FETCH_REPOS': 
+      
       var checkRepos = action.payload;
       const newArray = checkRepos.map(repo => {
         return {
@@ -22,15 +25,24 @@ const fetchRepositoriesReducer = (state = initialState, action) => {
           forks: repo.forks_count,
         }
       })
-
-      state = {
-        ...state,
+      // console.log(newArray);
+      
+      state = fromJS({
         repos: newArray,
-      }
+      })
     break;
 
     case 'CLEAR_FETCH': 
-      return state = Object.assign(state, initialState);
+      return state = fromJS({
+        repos: [
+          {
+            name: " ",
+            language: " ",
+            stargazers_count: 0,
+            forks_count: 0,
+          }
+        ],
+      });
     break;
   }
 
